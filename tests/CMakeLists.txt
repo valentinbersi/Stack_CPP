@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.22)
-project(Queue_tests)
+project(Stack_tests)
 
 set(CMAKE_C_STANDARD 23)
 
