@@ -6,7 +6,7 @@
 
 class EmptyException : public std::exception {
 public:
-    const char *what() const noexcept override {
+    [[nodiscard]] const char *what() const noexcept override {
             return "The stack is empty.";
     }
 };
@@ -106,7 +106,7 @@ void Stack<T>::add(T new_element) {
 
     } else {
         auto *new_node = new SNode<T>(new_element);
-        last_node->set_next(new_node);
+        new_node->set_next(last_node);
         last_node = new_node;
     }
 
